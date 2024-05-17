@@ -13,7 +13,8 @@ function UsernameForm({onSubmitUsername}) {
   }
 
   const handleChange = e => {
-    setInput(e.target.value)
+    const {value} = e.target
+    setInput(value.toLowerCase())
   }
   // 💰 Make sure to accept the `event` as an argument and call
   // `event.preventDefault()` to prevent the default behavior of form submit
